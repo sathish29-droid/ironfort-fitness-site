@@ -1,0 +1,9 @@
+# netlify.toml
+[build]
+  publish = "."
+
+# Redirect all requests to index.html (for SPA routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
