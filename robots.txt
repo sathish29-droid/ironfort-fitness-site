@@ -1,0 +1,13 @@
+# Allow all search engines to crawl everything except private/admin folders
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+
+# Point to your enhanced sitemap
+Sitemap: https://ironfort-fitness-studio.netlify.app/sitemap.xml
+
+# Optional crawl-delay (Google usually ignores, but safe for others)
+Crawl-delay: 5
+
+# Explicitly allow crawling of images folder
+Allow: /images/

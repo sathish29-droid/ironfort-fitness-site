@@ -87,7 +87,7 @@ nav {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--text-light);
+    background-color: var(--primary-color);
     transition: all 0.3s ease;
 }
 
