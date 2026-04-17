@@ -295,8 +295,7 @@
 
       function updateResponsiveState() { imagesPerView = getImagesPerView(); }
       function calculateStepWidth() {
-        const style = window.getComputedStyle(images[0]);
-        stepWidth = images[0].offsetWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+          stepWidth = images[0].getBoundingClientRect().width + 20;
       }
       function updateSlider() { track.style.transform = `translate3d(-${index * stepWidth}px,0,0)`; updateDots(); }
 
@@ -320,8 +319,17 @@
       }
 
       // Navigation
-      function nextSlide() { index = index + imagesPerView > images.length - imagesPerView ? 0 : index + imagesPerView; updateSlider(); }
-      function prevSlide() { index = index - imagesPerView < 0 ? images.length - imagesPerView : index - imagesPerView; updateSlider(); }
+      function nextSlide() {
+  const maxIndex = images.length - imagesPerView;
+  index = index >= maxIndex ? 0 : index + 1;
+  updateSlider();
+}
+
+function prevSlide() {
+  const maxIndex = images.length - imagesPerView;
+  index = index <= 0 ? maxIndex : index - 1;
+  updateSlider();
+}
       nextBtn.addEventListener("click", nextSlide);
       prevBtn.addEventListener("click", prevSlide);
 
@@ -339,8 +347,11 @@
           const oldPerView = imagesPerView;
           updateResponsiveState();
           calculateStepWidth();
-          if (oldPerView !== imagesPerView) { createDots(); index = 0; }
-          updateSlider();
+if (oldPerView !== imagesPerView) {
+  createDots();
+  index = 0;
+  calculateStepWidth();
+}          updateSlider();
         }, 150);
       });
 
