@@ -1,65 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- Home Section -->
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
     <loc>https://ironfort-fitness-studio.netlify.app/</loc>
     <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://ironfort-fitness-studio.netlify.app/images/final_logo.png</image:loc>
-      <image:caption>IronFort Fitness Studio Logo</image:caption>
-    </image:image>
   </url>
-
-  <!-- About Section -->
-  <url>
-    <loc>https://ironfort-fitness-studio.netlify.app/#about</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Trainer Section -->
-  <url>
-    <loc>https://ironfort-fitness-studio.netlify.app/#trainer</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ironfort-fitness-studio.netlify.app/images/trainer1.jpeg</image:loc>
-      <image:caption>Manikandan, Head Coach & Founder</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Gallery Section -->
-  <url>
-    <loc>https://ironfort-fitness-studio.netlify.app/#gallery</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://ironfort-fitness-studio.netlify.app/images/gym1.jpeg</image:loc>
-      <image:caption>IronFort Gym Eachanari Coimbatore workout area</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ironfort-fitness-studio.netlify.app/images/gym2.jpeg</image:loc>
-      <image:caption>Gym interior view with equipment</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ironfort-fitness-studio.netlify.app/images/gym3.jpeg</image:loc>
-      <image:caption>Weight training area at IronFort Fitness Studio</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Contact Section -->
-  <url>
-    <loc>https://ironfort-fitness-studio.netlify.app/#contact</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
 </urlset>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IronFort Fitness Studio | Coimbatore Gym</title>
+
+  <meta name="description" content="IronFort Fitness Studio in Coimbatore offers strength training, fat loss programs, and personal coaching.">
+  <meta name="keywords" content="Gym Coimbatore, Fitness Studio, Strength Training, Personal Trainer">
+
+  <link rel="canonical" href="https://ironfort-fitness-studio.netlify.app/">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header>
+  <nav>
+    <a href="#home" class="logo">
+      <img src="IronFort-Fitness/images/final_logo.png" class="logo-img" alt="Logo">
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#trainer">Trainer</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<section id="home">
+  <img src="ironfort-fitness/images/gym1.webp" class="hero-bg" alt="Gym">
+  <h1>Best Gym in Coimbatore</h1>
+  <p>Transform your body with expert coaching.</p>
+
+  <a href="tel:+918754311220" class="call-btn">Call Now</a>
+  <a href="https://wa.me/918754311220" class="btn">WhatsApp</a>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We help you achieve fitness goals with expert training.</p>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <ul>
+    <li>Weight Training</li>
+    <li>Fat Loss</li>
+    <li>Cardio</li>
+    <li>Personal Training</li>
+  </ul>
+</section>
+
+<section id="trainer">
+  <h2>Trainer</h2>
+  <div class="trainer-card">
+    <img src="IronFort-Fitness/images/trainer1.jpeg" alt="Trainer">
+    <div>
+      <h3>Manikandan</h3>
+      <p>Head Coach</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ GALLERY -->
+<section id="gallery">
+  <h2>Gallery</h2>
+
+  <div class="gallery-container">
+    <button class="arrow left">&#10094;</button>
+
+    <div class="gallery-track">
+      <img src="IronFort-Fitness/images/gym1.webp">
+      <img src="IronFort-Fitness/images/gym2.webp">
+      <img src="IronFort-Fitness/images/gym3.webp">
+      <img src="IronFort-Fitness/images/gym4.webp">
+      <img src="IronFort-Fitness/images/gym5.webp">
+      <img src="IronFort-Fitness/images/gym6.webp">
+    </div>
+
+    <button class="arrow right">&#10095;</button>
+  </div>
+
+  <div class="dots"></div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p>📍 Eachanari, Coimbatore</p>
+  <p>📞 +91 87543 11220</p>
+  <p>✉ ironfortfitnessstudio@gmail.com</p>
+
+  <a href="https://wa.me/918754311220" class="btn">WhatsApp</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 IronFort Fitness Studio</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  AOS.init();
+
+  // hamburger
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // gallery
+  const track = document.querySelector(".gallery-track");
+  const images = document.querySelectorAll(".gallery-track img");
+  const next = document.querySelector(".arrow.right");
+  const prev = document.querySelector(".arrow.left");
+  const dotsContainer = document.querySelector(".dots");
+
+  let index = 0;
+  let perView = 3;
+
+  function update() {
+    const width = images[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${index * width}px)`;
+  }
+
+  next.onclick = () => {
+    index = (index + 1) % images.length;
+    update();
+  };
+
+  prev.onclick = () => {
+    index = (index - 1 + images.length) % images.length;
+    update();
+  };
+});
+</script>
+
+</body>
+</html>

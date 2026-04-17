@@ -1,43 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
-    <title>IronFort Fitness Studio | Strength & Conditioning Coimbatore</title>
-    <meta name="description" content="IronFort Fitness Studio in Coimbatore offers expert strength training, functional conditioning, and personalized coaching to help you achieve your fitness goals.">
-    <meta name="keywords" content="IronFort Fitness, Gym Coimbatore, Strength Training, Personal Trainer, Functional Fitness">
-    <meta name="author" content="IronFort Fitness Studio">
+  <!-- SEO Meta Tags -->
+  <title>IronFort Fitness Studio | Strength & Conditioning Coimbatore</title>
+  <meta name="description" content="IronFort Fitness Studio in Coimbatore offers expert strength training, functional conditioning, and personalized coaching to help you achieve your fitness goals.">
+  <meta name="keywords" content="IronFort Fitness, Gym Coimbatore, Strength Training, Personal Trainer, Functional Fitness">
+  <meta name="author" content="IronFort Fitness Studio">
+  <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Social Media -->
-   <meta property="og:title" content="IronFort Fitness Studio | Forge Your Legacy">
-<meta property="og:description" content="Join IronFort Fitness Studio in Coimbatore for expert strength training, functional conditioning, and personalized coaching.">
-<meta property="og:image" content="https://ironfort-fitness-studio.netlify.app/images/final_logo.png">
-<meta property="og:url" content="https://ironfort-fitness-studio.netlify.app/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="IronFort Fitness Studio">
-<meta property="og:image:alt" content="IronFort Fitness Studio Logo">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="IronFort Fitness Studio | Forge Your Legacy">
+  <meta property="og:description" content="Join IronFort Fitness Studio in Coimbatore for expert strength training, functional conditioning, and personalized coaching.">
+  <meta property="og:image" content="https://ironfort-fitness-studio.netlify.app/images/final_logo.webp">
+  <meta property="og:url" content="https://ironfort-fitness-studio.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IronFort Fitness Studio">
+  <meta property="og:image:alt" content="IronFort Fitness Studio Logo">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <link rel="canonical" href="https://ironfort-fitness-studio.netlify.app/">
+  <link rel="canonical" href="https://ironfort-fitness-studio.netlify.app/">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/final_logo.png" type="image/png">
+  <!-- Preconnect for faster font & CDN loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts with swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Font metric overrides for LCP stability -->
+  <style>
+    @font-face {
+      font-family: 'Roboto';
+      src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxM.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      ascent-override: 90%;
+      descent-override: 20%;
+      line-gap-override: 0%;
+    }
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
+    @font-face {
+      font-family: 'Roboto';
+      src: url('https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc-.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+      ascent-override: 90%;
+      descent-override: 20%;
+      line-gap-override: 0%;
+    }
+  </style>
+
+  <!-- Critical CSS (above-the-fold hero) -->
+  <style>
+    #home {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(-45deg, #0b0b0b, #111, #0f0f0f, #1a1a1a);
+      color: #fff;
+    }
+  </style>
+
+  <!-- Preload non-critical styles -->
+   <link rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+  <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/final_logo.webp" type="image/webp">
+
+  <!-- Main CSS -->
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Gym",
       "name": "IronFort Fitness Studio",
-      "image": "https://yourdomain.com/images/final_logo.png",
-      "@id": "https://yourdomain.com",
-      "url": "https://yourdomain.com",
+      "image": "https://ironfort-fitness-studio.netlify.app/images/final_logo.webp",
+      "@id": "https://ironfort-fitness-studio.netlify.app/",
+      "url": "https://ironfort-fitness-studio.netlify.app/",
       "telephone": "+918754311220",
       "address": {
         "@type": "PostalAddress",
@@ -49,142 +111,250 @@
       },
       "openingHours": "Mo-Su 06:00-22:00"
     }
-    </script>
+  </script>
 </head>
+
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <!-- Header / Navigation -->
-    <header>
-        <nav aria-label="Main Navigation">
-            <a href="#home" class="logo">
-                <img src="images/final_logo.png" alt="IronFort Fitness Studio Logo" class="logo-img">
+  <!-- HEADER -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <a href="#home" class="logo">
+        <img src="IronFort-Fitness/images/final_logo.webp" alt="IronFort Fitness Studio Logo" class="logo-img">
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="nav-links">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#trainer">Trainer</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="home">
+        <img src="IronFort-Fitness/images/gym1.webp" alt="Gym Background" class="hero-bg">
+      <h1>Best Gym in Eachanari, Coimbatore</h1>
+      <p>IronFort Fitness Studio helps you build strength, lose weight, and transform your body with expert guidance
+        and modern equipment.</p>
+      <a href="tel:+918754311220" class="call-btn">📞 Call Now</a>
+      <a href="https://wa.me/918754311220" class="btn">💬 WhatsApp</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" data-aos="fade-right">
+      <h2>About IronFort Fitness Studio</h2>
+      <p>IronFort Fitness Studio is a leading gym in Eachanari, Coimbatore offering strength training, fat loss
+        programs, and personal coaching. We focus on real results with expert trainers and a motivating
+        environment.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" data-aos="fade-up">
+      <h2>Our Services</h2>
+      <ul>
+        <li>💪 Weight Training</li>
+        <li>🔥 Fat Loss Programs</li>
+        <li>🏃 Cardio Workouts</li>
+        <li>🧑‍🏫 Personal Training</li>
+        <li>🏋️ Muscle Building</li>
+      </ul>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" data-aos="fade-left">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✔ Best Gym in Eachanari</li>
+        <li>✔ Affordable Membership Plans</li>
+        <li>✔ Clean & Spacious Gym</li>
+        <li>✔ Friendly Environment</li>
+      </ul>
+    </section>
+
+    <!-- TRAINER -->
+    <section id="trainer" data-aos="zoom-in">
+      <h2>Meet Your Trainer</h2>
+      <div class="trainer-card">
+        <img src="IronFort-Fitness/images/trainer1.jpeg" alt="Head Trainer IronFort Fitness Studio" loading="lazy">
+        <div>
+          <h3>Manikandan</h3>
+          <p>Head Coach & Founder</p>
+          <p>With 15+ years in strength training and fat loss coaching. I work with people to build strength, lose
+            fat, and create fitness habits they can actually stick to long term.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" data-aos="fade-up">
+      <h2>Gym Gallery</h2>
+      <div class="gallery-container">
+        <button class="arrow left">&#10094;</button>
+        <div class="gallery-track">
+          <img src="IronFort-Fitness/images/gym1.webp" alt="Gym in Eachanari Coimbatore equipment" loading="lazy">
+          <img src="IronFort-Fitness/images/gym2.webp" alt="IronFort Fitness Studio interior Coimbatore" loading="lazy">
+          <img src="IronFort-Fitness/images/gym3.webp" alt="Weight training area Eachanari gym" loading="lazy">
+          <img src="IronFort-Fitness/images/gym4.webp" alt="Weight training area Eachanari gym" loading="lazy">
+          <img src="IronFort-Fitness/images/gym5.webp" alt="Smith Machine area Eachanari gym" loading="lazy">
+          <img src="IronFort-Fitness/images/gym6.webp" alt="Entrance of IronFort Fitness Eachanari gym" loading="lazy">
+        </div>
+        <button class="arrow right">&#10095;</button>
+      </div>
+      <div class="dots"></div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <h2>Start Your Transformation Today 💪</h2>
+      <p>Join the best gym in Eachanari and get expert guidance for faster results.</p>
+      <a href="tel:+918754311220" class="btn">📞 Call Now</a>
+      <a href="https://wa.me/918754311220" class="btn">💬 WhatsApp</a>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <div class="contact-wrapper">
+        <!-- LEFT: Contact Info -->
+        <div class="contact-info">
+          <p><strong>Address:</strong> 528/1J, Annapurani Nagar, Serapalayamputhur, Eachanari, Coimbatore - 641021</p>
+          <p class="phone"><strong>Phone:</strong> <a href="tel:+918754311220">+91 87543 11220</a></p>
+          <p><strong>Email:</strong> ironfortfitnessstudio@gmail.com</p>
+          <div class="social-links">
+            <a href="https://wa.me/918754311220" target="_blank" class="whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
             </a>
-            
-            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#trainer">Trainer</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" aria-label="Hero Section">
-        <h1>Forge Your Legacy</h1>
-        <p>Unleash your true potential at the city's premier strength and conditioning facility.</p>
-        <a href="#contact" class="btn">Join the Fort</a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" aria-label="About Us Section">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-content">
-            <p>IronFort Fitness Studio helps you build strength, stay consistent, and reach your best. With expert guidance and a supportive community, we make fitness simple, challenging, and rewarding for everyone.</p>
+            <a href="https://instagram.com/ironfortfitness" target="_blank" class="instagram">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+          </div>
         </div>
-    </section>
 
-    <!-- Trainer Section -->
-    <section id="trainer" aria-label="Trainer Section">
-        <h2 class="section-title">Meet Your Trainer</h2>
-        <div class="trainer-card">
-            <div class="trainer-img-wrapper">
-                <img src="images/trainer1.jpeg" alt="Manikandan, Head Coach & Founder at IronFort Fitness Studio" class="trainer-img">
-            </div>
-            <div class="trainer-info">
-                <h3>Manikandan</h3>
-                <p>Head Coach & Founder</p>
-                <p>Specializing in strength training and functional conditioning. Dedicated to helping clients achieve their personal best.</p>
-            </div>
+        <!-- RIGHT: Map -->
+        <div class="contact-map" role="region" aria-label="Location map of IronFort Fitness Studio">
+          <h3>Find Us Here</h3>   
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15779263.071919398!2d64.47187799999996!3d15.083521971372043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b3d3e52ad7f%3A0xcc8ac43c461197ff!2sIronFort%20fitness%20studio!5e0!3m2!1sen!2sin!4v1776191523047!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"  title="Google Map showing IronFort Fitness Studio location in Eachanari, Coimbatore" ></iframe>  
         </div>
+      </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" aria-label="Gallery Section">
-        <h2 class="section-title">Our Gym Gallery</h2>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="images/gym1.jpeg" alt="IronFort Gym Eachanari Coimbatore workout area" >
-            </div>
-            <div class="gallery-item">
-                <img src="images/gym2.jpeg" alt="Gym interior view with equipment">
-            </div>
-            <div class="gallery-item">
-                <img src="images/gym3.jpeg" alt="Weight training area at IronFort Fitness Studio">
-            </div>
-        </div>
-    </section>
+  </main>
 
-    <!-- Contact Section -->
-    <section id="contact" aria-label="Contact Section">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <div class="info-item">
-                    <strong>Address:</strong>
-                    <span>Fitness Studio, Iron Fort, Eachanari, Coimbatore, Tamil Nadu 641021</span>
-                </div>
-                <div class="info-item">
-                    <strong>Phone:</strong>
-                    <span><a href="tel:+918754311220">+91 87543 11220</a></span>
-                </div>
-                <div class="info-item">
-                    <strong>Email:</strong>
-                    <span><a href="mailto:ironfortfitnessstudio@gmail.com">ironfortfitnessstudio@gmail.com</a></span>
-                </div>
-                
-                <div class="social-links">
-                    <a href="https://wa.me/+918754311220" target="_blank" class="social-btn wa">WhatsApp</a>
-                    <a href="https://instagram.com/ironfortfitness" target="_blank" class="social-btn ig">Instagram</a>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>IronFort Fitness Studio - Best Gym in Eachanari, Coimbatore</p>
+    <p>© 2026 All Rights Reserved</p>
+  </footer>
 
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12201.6593698706!2d76.97642766481934!3d10.918759567488763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b3d3e52ad7f%3A0xcc8ac43c461197ff!2sIronFort%20fitness%20studio!5e1!3m2!1sen!2sin!4v1773642831599!5m2!1sen!2sin" 
-                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-                    title="Map showing IronFort Fitness Studio location">
-                </iframe>
-            </div>
-        </div>
-    </section>
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.AOS) AOS.init({ duration: 900, once: true, offset: 120 });
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 IronFort Fitness Studio. All rights reserved.</p>
-    </footer>
+      // Gallery Slider Logic
+      const track = document.querySelector(".gallery-track");
+      const images = Array.from(track.querySelectorAll("img"));
+      const dotsContainer = document.querySelector(".dots");
+      const nextBtn = document.querySelector(".arrow.right");
+      const prevBtn = document.querySelector(".arrow.left");
+      const gallery = document.querySelector(".gallery-container");
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
 
-    <!-- Navigation Script -->
-    <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    const links = document.querySelectorAll('.nav-links li');
-
-    // Toggle Menu
-    hamburger.addEventListener('click', () => {
-        const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-        hamburger.setAttribute('aria-expanded', !expanded);
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', false);
+      // Hamburger
+      if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+          const isOpen = hamburger.getAttribute("aria-expanded") === "true";
+          hamburger.setAttribute("aria-expanded", !isOpen);
+          navLinks.classList.toggle("active");
         });
-    });
-    </script>
+      }
 
+      // Slider State
+      let index = 0, autoPlay = null, imagesPerView = getImagesPerView(), stepWidth = 0;
+
+      function getImagesPerView() {
+        if (window.innerWidth <= 480) return 1;
+        if (window.innerWidth <= 768) return 2;
+        return 3;
+      }
+
+      function updateResponsiveState() { imagesPerView = getImagesPerView(); }
+      function calculateStepWidth() {
+        const style = window.getComputedStyle(images[0]);
+        stepWidth = images[0].offsetWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+      }
+      function updateSlider() { track.style.transform = `translate3d(-${index * stepWidth}px,0,0)`; updateDots(); }
+
+      // Dots
+      function createDots() {
+        dotsContainer.innerHTML = "";
+        const pages = Math.ceil(images.length / imagesPerView);
+        for (let i = 0; i < pages; i++) {
+          const dot = document.createElement("span");
+          dot.addEventListener("click", () => { index = i * imagesPerView; updateSlider(); });
+          dotsContainer.appendChild(dot);
+        }
+        updateDots();
+      }
+
+      function updateDots() {
+        const dots = dotsContainer.querySelectorAll("span");
+        const activeIndex = Math.floor(index / imagesPerView);
+        dots.forEach(d => d.classList.remove("active"));
+        if (dots[activeIndex]) dots[activeIndex].classList.add("active");
+      }
+
+      // Navigation
+      function nextSlide() { index = index + imagesPerView > images.length - imagesPerView ? 0 : index + imagesPerView; updateSlider(); }
+      function prevSlide() { index = index - imagesPerView < 0 ? images.length - imagesPerView : index - imagesPerView; updateSlider(); }
+      nextBtn.addEventListener("click", nextSlide);
+      prevBtn.addEventListener("click", prevSlide);
+
+      // AutoPlay
+      function startAuto() { stopAuto(); autoPlay = setInterval(nextSlide, 3500); }
+      function stopAuto() { clearInterval(autoPlay); }
+      gallery.addEventListener("mouseenter", stopAuto);
+      gallery.addEventListener("mouseleave", startAuto);
+
+      // Resize
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const oldPerView = imagesPerView;
+          updateResponsiveState();
+          calculateStepWidth();
+          if (oldPerView !== imagesPerView) { createDots(); index = 0; }
+          updateSlider();
+        }, 150);
+      });
+
+      // Init
+      updateResponsiveState();
+      calculateStepWidth();
+      createDots();
+      updateSlider();
+      startAuto();
+
+      // bfcache support
+      window.addEventListener('pageshow', e => { if (e.persisted) { startAuto(); updateSlider(); } });
+      window.addEventListener('pagehide', stopAuto);
+    });
+  </script>
 </body>
 </html>
